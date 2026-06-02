@@ -2,6 +2,7 @@ export const profile = {
   name: "Yahya Hafidz",
   title: "Quality Assurance Engineer",
   email: "yahya_hafidz@yahoo.co.id",
+  emailLink: "mailto:yahya_hafidz@yahoo.co.id",
   phone: "+62 812 2904 0909",
   phoneLink: "https://wa.me/6281229040909",
   location: "South Jakarta, ID",
