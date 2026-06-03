@@ -7,7 +7,7 @@ export const profile = {
   phoneLink: "https://wa.me/6281229040909",
   location: "South Jakarta, ID",
   summary:
-    "Results-driven Quality Assurance Engineer with 3+ years of experience in automation testing, API validation, and agile development environments. Complemented with backend development expertise that enhances bug tracing capabilities and enables precise, actionable reporting to development teams. Proven expertise in reducing production defects through comprehensive test strategies across web, mobile, and API platforms. Proficient in multiple automation frameworks with a strong foundation in financial services and enterprise application testing.",
+    "Results-driven Quality Assurance Engineer with 4+ years of experience in automation testing, API validation, and agile development environments. Complemented with backend development expertise that enhances bug tracing capabilities and enables precise, actionable reporting to development teams. Proven expertise in reducing production defects through comprehensive test strategies across web, mobile, and API platforms. Proficient in multiple automation frameworks with a strong foundation in financial services and enterprise application testing.",
 };
 
 export const stats = [
@@ -20,7 +20,7 @@ export const stats = [
 export const techStack = [
   "CYPRESS",
   "KATALON",
-  "KODECEPTJS",
+  "CODECEPTJS",
   "KARATE",
   "JEST",
   "SELENIUM",
@@ -192,7 +192,7 @@ export const experience = [
     role: "QA Engineer Intern",
     period: "Jan 2022 – Jun 2022",
     location: "Bantul, Yogyakarta",
-    color: "slate",
+    color: "pink",
     items: [
       "Drove QA for eKYC integrating 3 third-party liveness providers via comparative API testing.",
       "Implemented Cypress E2E tests in GitLab CI/CD with weekly progress reporting.",
@@ -216,9 +216,9 @@ export const education = {
 };
 
 export const certifications = [
+  { name: "Software Quality Assurance StudyJam", org: "NestAcademy" },
   { name: "Laravel Bootcamp", org: "SanberCode" },
   { name: "Back-End Application Development for Beginners", org: "Dicoding" },
-  { name: "Software Quality Assurance StudyJam", org: "NestAcademy" },
   { name: "Web Development", org: "Udemy" },
 ];
 
@@ -229,20 +229,6 @@ export const projects = [
       "Comprehensive automation testing portfolio for an e-commerce platform. Covers E2E UI testing, pure API testing, and hybrid API+UI checkout flows using Page Object Model.",
     tags: ["Playwright", "TypeScript", "GitHub Actions", "API Testing"],
     link: "https://github.com/Yahyalt/playwright-porto",
-  },
-  {
-    name: "Notes API Backend",
-    description:
-      "A comprehensive RESTful API for managing notes with user authentication, collaboration features, and export functionality via RabbitMQ queues.",
-    tags: ["Hapi.js", "PostgreSQL", "JWT", "RabbitMQ", "Node.js"],
-    link: "https://github.com/Yahyalt/Notes-API---Backend-Application",
-  },
-  {
-    name: "OpenMusic API",
-    description:
-      "A RESTful API built for managing music data, focusing on backend development concepts, database management, and clean architecture.",
-    tags: ["Hapi.js", "PostgreSQL", "Node.js", "REST API"],
-    link: "https://github.com/Yahyalt/openmusic-api-backend",
   },
   {
     name: "Weather API Test Suite",
@@ -257,5 +243,19 @@ export const projects = [
       "An automated API testing suite for a bookstore REST API, validating CRUD operations, authentication, and generating detailed HTML test reports.",
     tags: ["Jest", "Axios", "Node.js", "API Testing"],
     link: "https://github.com/Yahyalt/API-automation",
+  },
+  {
+    name: "Notes API Backend",
+    description:
+      "A comprehensive RESTful API for managing notes with user authentication, collaboration features, and export functionality via RabbitMQ queues.",
+    tags: ["Hapi.js", "PostgreSQL", "JWT", "RabbitMQ", "Node.js"],
+    link: "https://github.com/Yahyalt/Notes-API---Backend-Application",
+  },
+  {
+    name: "OpenMusic API",
+    description:
+      "A RESTful API built for managing music data, focusing on backend development concepts, database management, and clean architecture.",
+    tags: ["Hapi.js", "PostgreSQL", "Node.js", "REST API"],
+    link: "https://github.com/Yahyalt/openmusic-api-backend",
   },
 ];
