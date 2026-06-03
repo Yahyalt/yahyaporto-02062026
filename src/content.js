@@ -221,3 +221,41 @@ export const certifications = [
   { name: "Software Quality Assurance StudyJam", org: "NestAcademy" },
   { name: "Web Development", org: "Udemy" },
 ];
+
+export const projects = [
+  {
+    name: "Playwright E2E & API Automation",
+    description:
+      "Comprehensive automation testing portfolio for an e-commerce platform. Covers E2E UI testing, pure API testing, and hybrid API+UI checkout flows using Page Object Model.",
+    tags: ["Playwright", "TypeScript", "GitHub Actions", "API Testing"],
+    link: "https://github.com/Yahyalt/playwright-porto",
+  },
+  {
+    name: "Notes API Backend",
+    description:
+      "A comprehensive RESTful API for managing notes with user authentication, collaboration features, and export functionality via RabbitMQ queues.",
+    tags: ["Hapi.js", "PostgreSQL", "JWT", "RabbitMQ", "Node.js"],
+    link: "https://github.com/Yahyalt/Notes-API---Backend-Application",
+  },
+  {
+    name: "OpenMusic API",
+    description:
+      "A RESTful API built for managing music data, focusing on backend development concepts, database management, and clean architecture.",
+    tags: ["Hapi.js", "PostgreSQL", "Node.js", "REST API"],
+    link: "https://github.com/Yahyalt/openmusic-api-backend",
+  },
+  {
+    name: "Weather API Test Suite",
+    description:
+      "A comprehensive Katalon Studio project for testing OpenWeatherMap APIs, featuring custom Groovy keywords, Postman imports, and JUnit/HTML reporting.",
+    tags: ["Katalon Studio", "Groovy", "API Testing", "Postman"],
+    link: "https://github.com/Yahyalt/Weather-API-Test-Suite-Katalon-Studio-",
+  },
+  {
+    name: "Bookstore API Automation",
+    description:
+      "An automated API testing suite for a bookstore REST API, validating CRUD operations, authentication, and generating detailed HTML test reports.",
+    tags: ["Jest", "Axios", "Node.js", "API Testing"],
+    link: "https://github.com/Yahyalt/API-automation",
+  },
+];

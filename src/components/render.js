@@ -4,6 +4,7 @@ import {
   techStack,
   skills,
   experience,
+  projects,
   education,
   certifications,
 } from "../content.js";
@@ -23,13 +24,15 @@ export function renderComponents(data) {
   const app = document.getElementById("app");
   const mobileLinks = document.getElementById("mobileLinks");
 
-  ["About", "Skills", "Experience", "Education", "Contact"].forEach((link) => {
-    const a = document.createElement("a");
-    a.href = `#${link.toLowerCase()}`;
-    a.className = "block hover:text-sky-400";
-    a.textContent = link;
-    mobileLinks.appendChild(a);
-  });
+  ["About", "Skills", "Experience", "Projects", "Education", "Contact"].forEach(
+    (link) => {
+      const a = document.createElement("a");
+      a.href = `#${link.toLowerCase()}`;
+      a.className = "block hover:text-sky-400";
+      a.textContent = link;
+      mobileLinks.appendChild(a);
+    },
+  );
 
   app.innerHTML = `
         <header id="about" class="hero-gradient min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
@@ -84,6 +87,38 @@ export function renderComponents(data) {
           })
           .join("")}</div></div></section>
 
+        <div class="max-w-6xl mx-auto px-6"><div class="section-divider"></div></div>
+
+        <section id="projects" class="py-24 bg-slate-900 relative overflow-hidden">
+          <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+              <div class="inline-block px-3 py-1 mb-4 rounded-full bg-rose-500/10 border border-rose-500/20 text-rose-400 text-xs font-medium reveal reveal-up">OPEN SOURCE</div>
+              <h2 class="text-3xl md:text-5xl font-bold text-white mb-4 reveal reveal-up delay-1">Featured Projects</h2>
+              <p class="text-slate-400 max-w-2xl mx-auto reveal reveal-up delay-2">A selection of my backend development and automated testing repositories.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              ${data.projects
+                .map(
+                  (proj, i) => `
+                <a href="${proj.link}" target="_blank" rel="noopener noreferrer" class="group glass hover-lift p-6 rounded-2xl reveal reveal-up delay-${(i % 3) + 1} flex flex-col h-full border border-slate-700/50 hover:border-rose-500/50">
+                  <div class="flex items-start justify-between mb-4">
+                    <div class="w-12 h-12 bg-rose-500/20 rounded-lg flex items-center justify-center text-rose-400 icon-rotate">
+                      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 2.612.983.784-.218 1.623-.326 2.462-.326.84 0 1.681.109 2.467.326 1.602-1.303 2.607-.982 2.607-.982.653 1.653.241 2.874.119 3.176.767.84 1.234 1.91 1.234 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </div>
+                    <svg class="w-5 h-5 text-slate-500 group-hover:text-rose-400 group-hover:-translate-y-1 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                  </div>
+                  <h3 class="text-lg font-bold text-white mb-2 group-hover:text-rose-400 transition-colors">${proj.name}</h3>
+                  <p class="text-slate-400 text-sm mb-4 flex-grow">${proj.description}</p>
+                  <div class="flex flex-wrap gap-2 mt-auto">
+                    ${proj.tags.map((tag) => `<span class="px-2 py-1 bg-slate-800 rounded text-xs text-slate-300 border border-slate-700">${tag}</span>`).join("")}
+                  </div>
+                </a>
+              `,
+                )
+                .join("")}
+            </div>
+          </div>
+        </section>
         <div class="max-w-6xl mx-auto px-6"><div class="section-divider"></div></div>
 
         <section id="education" class="py-24 bg-slate-900 relative overflow-hidden"><div class="max-w-6xl mx-auto px-6"><div class="text-center mb-16"><div class="inline-block px-3 py-1 mb-4 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium reveal reveal-up">BACKGROUND</div><h2 class="text-3xl md:text-5xl font-bold text-white mb-4 reveal reveal-up delay-1">Education, Certs & Languages</h2></div><div class="grid grid-cols-1 md:grid-cols-2 gap-8">
